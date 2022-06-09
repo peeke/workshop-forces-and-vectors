@@ -1,0 +1,21 @@
+{
+  "name": "workshop-forces-and-vectors",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/peeke/workshop-forces-and-vectors.git",
+  "author": "Peeke Kuepers <pkuepers@kaliber.net>",
+  "license": "MIT",
+  "dependencies": {
+    "@kaliber/build": "^0.0.126"
+  },
+  "scripts": {
+    "start": "npm-run-all --parallel watch serve.dev",
+    "watch": "CONFIG_ENV=dev kaliber-watch",
+    "build": "NODE_ENV=production kaliber-build",
+    "serve": "kaliber-serve",
+    "serve.dev": "PORT=8000 CONFIG_ENV=dev kaliber-serve",
+    "lint": "npm-run-all --serial lint.javascript lint.styles",
+    "lint.javascript": "eslint -c .eslintrc --ignore-path .gitignore './**/*.js'",
+    "lint.styles": "stylelint --config .stylelintrc --ignore-path .gitignore './**/*.css'"
+  }
+}
