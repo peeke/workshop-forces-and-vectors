@@ -14,8 +14,8 @@ export function App() {
   const [spring, api] = useSpring(() => ({ x: 0 }))
 
   useAnimationFrame({ onFrame(dt) {
-    stateRef.current.position += stateRef.current.velocity * dt
     stateRef.current.velocity += stateRef.current.acceleration * dt
+    stateRef.current.position += stateRef.current.velocity * dt
     api.set({ x: stateRef.current.position })
   } })
 
