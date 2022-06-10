@@ -6,7 +6,9 @@
   "author": "Peeke Kuepers <pkuepers@kaliber.net>",
   "license": "MIT",
   "dependencies": {
-    "@kaliber/build": "^0.0.126"
+    "@kaliber/build": "^0.0.126",
+    "react-spring": "^9.4.5",
+    "three": "^0.141.0"
   },
   "scripts": {
     "start": "npm-run-all --parallel watch serve.dev",

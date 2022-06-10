@@ -13,3 +13,9 @@ body {
   font-weight: var(--font-weight-base-400);
   line-height: 1.7;
 }
+
+html,
+body,
+body > * {
+  height: 100%;
+}

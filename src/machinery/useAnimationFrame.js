@@ -12,7 +12,7 @@ export function useAnimationFrame({ onFrame, enabled = true }) {
       return () => cancelAnimationFrame(frame)
 
       function handleFrame(t) {
-        callback(t - timestamp)
+        callback((t - timestamp) / 1000)
         timestamp = t
         frame = requestAnimationFrame(handleFrame)
       }

@@ -1,0 +1,11 @@
+.app {
+  isolation: isolate;
+}
+
+.object {
+  width: 50px !important;
+  height: 50px !important;
+  background: hotpink;
+  border-radius: 50%;
+  will-change: transform;
+}
