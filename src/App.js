@@ -15,7 +15,7 @@ export function App() {
 
   useAnimationFrame({ onFrame(dt) {
     stateRef.current.position += stateRef.current.velocity * dt
-    stateRef.current.velocity += stateRef.current.position * dt
+    stateRef.current.velocity += stateRef.current.acceleration * dt
     api.set({ x: stateRef.current.position })
   } })
 
